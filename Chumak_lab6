@@ -1,0 +1,60 @@
+#include <iostream>
+#include <windows.h>
+#include <string>
+
+using namespace std;
+
+int main()
+{
+    SetConsoleCP(1251);
+    SetConsoleOutputCP(1251);
+
+    char name[] = { 'K', 'A', 'M', 'U', 'H', 'C' };
+    char surname[] = { 'V','A','L','S','I','D','A','L','V' };
+    char Yourgroup[] = { '1','1','-','D','D','T' };
+    char Age[] = { '8','1' };
+
+    const int size = sizeof(name) / sizeof(name[0]);
+    const int size1 = sizeof(surname) / sizeof(surname[0]);
+    const int size2 = sizeof(Yourgroup) / sizeof(Yourgroup[0]);
+    const int size3 = sizeof(Age) / sizeof(Age[0]);
+
+    char* ptr = name + size - 1;
+    char* ptr1 = surname + size1 - 1;
+    char* ptr2 = Yourgroup + size2 - 1;
+    char* ptr3 = Age + size3 - 1;
+
+    cout << "Name: ";
+    for (int i = 0; i < size; i++)
+    {
+        cout << *ptr;
+        ptr--;
+    }
+    cout << endl;
+
+    cout << "Surname: ";
+    for (int i = 0; i < size1; i++)
+    {
+        cout << *ptr1;
+        ptr1--;
+    }
+    cout << endl;
+
+    cout << "Group: ";
+    for (int i = 0; i < size2; i++)
+    {
+        cout << *ptr2;
+        ptr2--;
+    }
+    cout << endl;
+
+    cout << "Age: ";
+    for (int i = 0; i < size3; i++)
+    {
+        cout << *ptr3;
+        ptr3--;
+    }
+    cout << endl;
+
+    return 0;
+}
